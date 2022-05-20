@@ -1,0 +1,22 @@
+# Latex
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.pdf
+*.run.xml
+*.toc
+*-blx.bib
+*.log
+*.kate-swp
+*.lol
+*.out
+*.ps
+*.@@@
+*.DS_Store
+**/.texpadtmp/**/**.*
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.lof
