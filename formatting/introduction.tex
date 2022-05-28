@@ -1,11 +1,11 @@
 \section{Einleitung}
 	So wie Softwareprojekte in den vergangenen Jahren immer weiter an Komplexität zugenommen haben, so rückt die Wartbarkeit immer weiter in den Fokus.
-	Hierzu ist ist, neben den Verwendeten Tools, die "saubere" Strukturierung des Codes, der wichtigste Faktor.
+	Hierzu ist ist, neben den Verwendeten Tools, die \qq{saubere} Strukturierung des Codes, der wichtigste Faktor.
 	Es gibt viele Punkte zu beachten und noch mehr Ansätze und Methoden, um diese zu erreichen.
 	Im Folgenden wollen wir uns mit der Formatierung, also der Verwendung von Whitespace zur besseren Lesbarkeit beschäftigen.
 	\subsection{Wie lese ich eine Zeitung?}
 		Wir waren doch eben noch in der Informatik, was hat eine Zeitung damit zu tun?\\
-		Wenn wir von der "Newspaper Metaphor" sprechen, so einiges.
+		Wenn wir von der \qq{Newspaper Metaphor} sprechen, so einiges.
 		Guter Code sollte sich genau so lesen, wie eine Zeitung.
 		Jede Seite hat ein Thema, genau wie jede Klasse eine Aufgabe hat.
 		Die Seite ist in Artikel gegliedert, die spannendsten dabei am auffälligsten und am weitesten oben, genau wie z.B. beim Scherenprinzip in Java die public static Variablen einer Klasse als erstes kommen, da ihnen, folgend aus der größten Emmergenz, die größte Bedeutung zukommen sollte.
@@ -16,4 +16,41 @@
 		Deshalb brauchen wir, als Entwickler, genau wie ein Journalist, viel training und vorzugsweise eine professionelle Ausbildung, um diese Darstellung, für Menschen ohne unser Wissen, so einfach wie möglich zu gestalten.\\
 		Code ist dazu da, von Menschen gelesen zu werden, nicht von Maschinen.
 		Deshalb macht es auch nur sinn, die Formatierung durch Whitespace, der von den aller meisten Programmiersprachen ignoriert wird, für uns lesbar zu gestalten.
-		
+
+	\subsection{Negativbeispiel}
+		Die wohl ungünstigste Formatierung, die mir in den Sinn kommt, ist in \ref{fig:suboptimal-formatting} dargestellt.
+		\begin{figure}[ht!]
+			\caption{Suboptimale Formatierung \autocite{unknown-author-no-date}}
+			\label{fig:suboptimal-formatting}
+			\centering
+			\includegraphics[width=\paperwidth/4]{shirt.jpg}
+		\end{figure}
+		Auf den ersten Blick ist ersichtlich, dass dies EcmaScript ist.
+		Allerdings ist nicht ersichtlich, was der Code macht.\\
+		Unser Ziel sollte immer sein, dass dies auf den ersten Blick ersichtlich ist.\\
+		Hier ist der Code minifiziert. 
+		Dies ist im Webkontext üblich, da so mehr Information mit weniger Text über das Internet übertragen werden.
+		Folglich lädt die Website schneller.\\
+		Für den JavaScript interpreter gehen hier keine Informationen verloren.
+		Für uns als Menschen hingegen ist der Code deutlich schwerer bis gar nicht mehr zu lesen.\\
+		Doch woran liegt das?\\
+		Der Titel dieser Arbeit könnte euch einen entscheidenden Hinweis liefern: Formatierung.\\
+		Ein einfaches Problem ist, einen Code block zu finden.
+		Wo ist die schließende Klammer für die Funktion F in Zeile 3?
+		Die meisten herkömmlichen Codeeditoren haben Funktionalität (oder Erweiterungen), die passende Klammern markieren. (In Vim ist es \%.)\\
+		Wieder gilt: Nutzt jedes Werkzeug, dass ihr zur verfügung habt.\\
+		Aber späteste mit der Tiefenformatierung hilft auch das hier nicht weiter.\\
+		Dieses Problem wird es in der Realität nicht geben, dennoch wird niemand bestreiten, dass die Formatierung hier schlechter nicht seien könnte.
+		Ein praktisches Beispiel bietet Google. Unter Chromium basierten Browsern ist unter der URL \href{view-source:https://www.google.com/}{view-source:https://www.google.com/} der minifizierte Code der Google Suchmaschiene zu finden.
+		Dieser ist natürlich durch ein Tool aus \qq{suaberem} Code generiert, der ähnlich dem aussehen sollte, wenn ihr auf der Seite \href{https://www.google.com/}{https://www.google.com/} \keys{\ctrl + \shift + I} drückt, um den Inspektor zu öffnen.
+
+	\subsection{Aspekte}
+		Auch wenn wir noch nicht den Originalcode sehen, der vermutlich noch weit aus aufbereiteter ist, so fallen 3 zentrale Unterschiede in der Formatierung auf.
+		\paragraph{Horizontale Formatierung}
+			Hier vorallem in der Einrückung, bzw. in dem folding zu erkennen, dass durch eine horizontale Formatierung Gruppen und Scopes gut dargestellt werden können.
+		\paragraph{Vertikale Formatierung}
+			In dieser Darstellung nur durch Zeilenumbrüche realisiert, werden wir später sehen, dass auch durch Leerzeilen kleinere logische Einheiten gut voneinander getrennt werden können.
+		\paragraph{Lerzeichen}
+			Dabei geht es um die kleinste Einheit der Formatierung durch Whitespace.
+			So lassen sich bindungsstärken beschreiben.
+			Ein Beispiel ist, ob in C das Asteriks (*) zum Datentypen oder zum Namen gehört.
