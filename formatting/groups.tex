@@ -1,0 +1,50 @@
+\section{Gruppierungen}
+    Als Menschen assoziieren wir Sachen, die eng beieinander sind.
+    Alle folgenden Prinzipien orientieren sich an diesem Grundsatz.
+    Wir vergleichen dies wieder mit der Zeitung.
+    Auch hier wird das Interresse des Lesers mehr durch die freien Flächen gelenkt, als durch den Text selbst.
+    Es werden Artikel voneinander getrennt, zueinander in beziehung gesetzt und geschickt positioniert.
+    Genau das sollten wir auch machen.
+
+    \subsection{Positionierung}
+        Die Reihenfolge spielt eine zentrale Rolle für die Lesbarkeit.
+        \lstinputlisting[language=Java, caption={Positionierung Negativbeispiel \autocite{benson-2022}}, label=fig:positionierung]{test.java}
+        Ein Negativbeispiel ist in \ref{fig:positionierung} gegeben.
+        Hier muss beim Lesen gesprungen werden.
+        Zunächst liegt der Fokus nicht auf den Einstiegspunkt \textit{a()} gelegt.
+        Da wir von Oben nach Unten lesen, gehört diese Methode an den Anfang.
+        Unter allen Umständen ist zu vermeiden, dass beim Lesen gesucht werden muss.\\
+        Aber auch, wenn der Einstiegspunkt bekannt ist, so muss immernoch gesprungen werden.
+        Von \textit{b()} nach \textit{c()}.
+        Die Methoden sollten in der reihenfolge stehen, in der sie aufgerufen werden.
+        Also $\rightarrow\textit{a()}\rightarrow\textit{b()}\rightarrow\textit{c()}$.
+        Nur dann lassen sie sich in einer natürlichen Form lesen.\\
+        Nun sind die wenigsten Programme so linear wie dieses.
+        Hier sollte nach der semantischen Bedeutung bzw. der wichtigkeit, also wie stark die Methoden zusammenhängen, entschieden werden.\\
+        Eine Ausnahme für dieses Konzept bilden Instanzvariablen in der Objekt Orientierten Programierung (im Folgenden OOP) oder globale Variablen in funktionalen Programiersprachen.
+        Diese sollten einheitlich zu beginn der Klasse definiert werden.
+        Dies ist dadurch zu begründen, dass davon auszugehen ist, dass diese die größte Kohäsion haben, also nach möglichkeit, in vielen Funktionen/Methoden verwendet werden.
+        Außerdem weiß jeder sofort, wo er suchen muss.\\
+        In Java gilt beispielhaft die Reihenfolge:
+        \begin{enumerate}
+            \item \textit{public static final} Variablen
+            \item \textit{private static final} Variablen
+            \item \textit{private static} Variablen
+            \item \textit{private} Variablen
+            \item \textit{public static} Methoden
+            \item \textit{private static} Methoden
+            \item \textit{public} Methoden
+            \item \textit{private} Methoden
+        \end{enumerate}
+        Alles, was nicht genannt ist, sollte vermieden werden.
+
+    \subsection{Vertikale Formatierung}
+        Lehrzeilen sind das Mittel der Wahl für die vertikale Formatierung.
+        Durch sie sind wir in der Lage, Abgrenzungen zu schaffen und die Stärke der Bindung zwischen verschiedenen Teilen auszudrücken.\\
+        So ist es, zum Beispiel, wie auch in \ref{fig:positionierung} zu erkennen ist, üblich, zwischen verschiedenen Methoden eine Leerzeile zu lassen.
+        Dadurch ist es einfacher zu erkennen, wann ein Scope aufhört.
+        Dies bietet uns aber auch die Möglichkeit, zum Beispiel bei einem Getter und Setter, diese Lehrzeile weg zu lassen, um die zugehörigkeit zu verdeutlichen.
+        Dies sollte allerdings nicht zu häufig passieren.
+        Es gildt abzuwägen, was das Lesen im Einzelfall mehr erleichtert.\\
+        Auf der anderen Seite können allerdings auch zwei Lerzeilen eine unabhängigkeit ausdrücken.
+        Dies ist in einigen Programiersprachen zum Beispiel zwischen den Variablen und Methoden üblich.

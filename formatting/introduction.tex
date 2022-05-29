@@ -39,13 +39,13 @@
 		Wo ist die schließende Klammer für die Funktion F in Zeile 3?
 		Die meisten herkömmlichen Codeeditoren haben Funktionalität (oder Erweiterungen), die passende Klammern markieren. (In Vim ist es \%.)\\
 		Wieder gilt: Nutzt jedes Werkzeug, dass ihr zur verfügung habt.\\
-		Aber späteste mit der Tiefenformatierung hilft auch das hier nicht weiter.\\
+		Aber spätestens mit der Tiefenformatierung hilft auch das hier nicht weiter.\\
 		Dieses Problem wird es in der Realität nicht geben, dennoch wird niemand bestreiten, dass die Formatierung hier schlechter nicht seien könnte.
 		Ein praktisches Beispiel bietet Google. Unter Chromium basierten Browsern ist unter der URL \href{view-source:https://www.google.com/}{view-source:https://www.google.com/} der minifizierte Code der Google Suchmaschiene zu finden.
-		Dieser ist natürlich durch ein Tool aus \qq{suaberem} Code generiert, der ähnlich dem aussehen sollte, wenn ihr auf der Seite \href{https://www.google.com/}{https://www.google.com/} \keys{\ctrl + \shift + I} drückt, um den Inspektor zu öffnen.
+		Dieser ist natürlich durch ein Tool aus \qq{sauberem} Code generiert, der ähnlich dem aussehen sollte, wenn ihr auf der Seite \href{https://www.google.com/}{https://www.google.com/} \keys{\ctrl + \shift + I} drückt, um den Inspektor zu öffnen.
 
 	\subsection{Aspekte}
-		Auch wenn wir noch nicht den Originalcode sehen, der vermutlich noch weit aus aufbereiteter ist, so fallen 3 zentrale Unterschiede in der Formatierung auf.
+		Auch wenn wir noch nicht den Originalcode sehen, der vermutlich noch weitaus aufbereiteter ist, so fallen 3 zentrale Unterschiede in der Formatierung auf.
 		\paragraph{Horizontale Formatierung}
 			Hier vorallem in der Einrückung, bzw. in dem folding zu erkennen, dass durch eine horizontale Formatierung Gruppen und Scopes gut dargestellt werden können.
 		\paragraph{Vertikale Formatierung}
@@ -54,3 +54,10 @@
 			Dabei geht es um die kleinste Einheit der Formatierung durch Whitespace.
 			So lassen sich bindungsstärken beschreiben.
 			Ein Beispiel ist, ob in C das Asteriks (*) zum Datentypen oder zum Namen gehört.
+
+	\subsection{Warnung}
+		Bevor die einzelnen Konzepte im Folgenden aufgeführt sind, noch eine Warnung:\\
+		Die Formatierung (so wie auch alle anderen \qq{Regeln} aus Clean Code) sind zu wichtig, als dass wir uns dogmatisch an sie halten sollten.
+		Wenn wir es begründen können, dann ist jegliche Formatierung in Ordnung.
+		Die wichtigsten Ziele sind Lesbarkeit und Einheitlichkeit.
+		Also immer dem Team anpassen und dem Gedanken folgen, nicht den \qq{Regeln}.
