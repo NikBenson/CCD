@@ -1,5 +1,5 @@
 \section{Gruppierungen}
-    Als Menschen assoziieren wir Sachen, die eng beieinander sind.
+    Als Menschen assoziieren wir Sachen miteinander, die eng beieinander sind.
     Alle folgenden Prinzipien orientieren sich an diesem Grundsatz.
     Wir vergleichen dies wieder mit der Zeitung.
     Auch hier wird das Interesse des Lesers mehr durch die freien Flächen gelenkt, als durch den Text selbst.
@@ -11,8 +11,8 @@
         \lstinputlisting[language=Java, caption={Positionierung Negativbeispiel \autocite{benson-2022}}, label=fig:positionierung]{test.java}
         Ein Negativbeispiel ist in \ref{fig:positionierung} gegeben.
         Hier muss beim Lesen gesprungen werden.
-        Zunächst liegt der Fokus nicht auf den Einstiegspunkt \textit{a()} gelegt.
-        Da wir von Oben nach Unten lesen, gehört diese Methode an den Anfang.
+        Zunächst liegt der Fokus nicht auf dem Einstiegspunkt \textit{a()}.
+        Da wir von Oben nach Unten lesen gehört diese Methode an den Anfang.
         Unter allen Umständen ist zu vermeiden, dass beim Lesen gesucht werden muss.\\
         Aber auch, wenn der Einstiegspunkt bekannt ist, so muss immer noch gesprungen werden.
         Von \textit{b()} nach \textit{c()}.
@@ -39,15 +39,45 @@
         Alles, was nicht genannt ist, sollte vermieden werden.
 
     \subsection{Vertikale Formatierung}
-        Leerzeilen sind das Mittel der Wahl für die vertikale Formatierung.
-        Durch sie sind wir in der Lage, Abgrenzungen zu schaffen und die Stärke der Bindung zwischen verschiedenen Teilen auszudrücken.\\
-        So ist es, zum Beispiel, wie auch in \ref{fig:positionierung} zu erkennen ist, üblich, zwischen verschiedenen Methoden eine Leerzeile zu lassen.
-        Dadurch ist es einfacher zu erkennen, wann ein Scope aufhört.
-        Dies bietet uns aber auch die Möglichkeit, zum Beispiel bei einem Getter und Setter, diese Lehrzeile weg zu lassen, um die Zugehörigkeit zu verdeutlichen.
-        Dies sollte allerdings nicht zu häufig passieren.
-        Es gilt abzuwägen, was das Lesen im Einzelfall mehr erleichtert.\\
-        Auf der anderen Seite können allerdings auch zwei Leerzeilen eine Unabhängigkeit ausdrücken.
-        Dies ist in einigen Programmiersprachen zum Beispiel zwischen den Variablen und Methoden üblich.
+        Für die vertikale Formatierung spielen vor allem 2 Aspekte eine Rolle: Wie viele Zeilen sollte eine Datei haben, und wie viel davon sollte Whitespace sein.
+        \subsubsection{Offenheit und Dichte}
+            Leerzeilen sind das Mittel der Wahl um  Bindungsstärken auszudrücken.
+            Durch sie sind wir in der Lage, Abgrenzungen zu schaffen und im Gegensatz durch das auslassen von ihnen besonders Starke Bindungen hervorheben.\\
+            So ist es, zum Beispiel, wie auch in \ref{fig:positionierung} zu erkennen ist, üblich, zwischen verschiedenen Methoden eine Leerzeile zu lassen.
+            Dadurch ist es einfacher zu erkennen, wann ein Scope aufhört.
+            Dies bietet uns aber auch die Möglichkeit, zum Beispiel bei einem Getter und Setter, diese Lehrzeile weg zu lassen, um die Zugehörigkeit zu verdeutlichen.
+            Dies sollte allerdings nicht zu häufig passieren.
+            Es gilt abzuwägen, was das Lesen im Einzelfall mehr erleichtert.\\
+            Auf der anderen Seite können allerdings auch zwei Leerzeilen eine Unabhängigkeit ausdrücken.
+            Dies ist in einigen Programmiersprachen zum Beispiel zwischen den Variablen und Methoden üblich.
+            Den Standartfall gild es hier bei aus den jeweiligen Style Guides zu entnehmen.\\
+            Diese \qq{Regeln} sollten allerdings auf Gedanken und logische Einheiten bezogen werden.
+            Auch wenn diese sich im Regelfall mit den Funktionen doppeln sollten, so können doch größere Einheiten entstehen.
+            Ein Beispiel können Getter und Setter sein.
+            Hier spielt die Syntax der jeweiligen Programmiersprache allerdings eine große Rolle.
+            Vor allem das fehlen von Leerzeilen kann schnell dazu führen, dass schließende Klammern eines Scopes übersehen werden.\\
+            Mehr Spielraum gibt es innerhalb von Methoden oder Funktionen.
+            Auch wenn hier dasselbe für weitere Scopes gild.
+            Im Optimalfall sollte jede Methode höchstens eine Kontrollanweisung beinhalten.
+            In der Praxis ist dies nicht immer der Fall.
+            Bei verketteten Bedingungen ist es zum Beispiel wichtig, keine Klammern zu übersehen.
+            Entsprechend sollten wir auch hier standardmäßig, falls wir keinen Grund haben, es anders zu machen, Leerzeilen setzen.\\
+            Die meiste Freiheit bleibt uns bei den Variablen innerhalb einer Funktion, bzw. ihrem Preamble.
+            Hier verstecken wir meist keine Klammern, falls wir Leerzeilen weglassen.
+            So sollte hier vor allem semantischer Wert mit Leerzeilen verdeutlicht werden.
+
+        \subsubsection{Länge von Datein}
+            Die Dateilänge hängt von vielen Faktoren ab.
+            In Objektorientierten Programmiersprachen korreliert sie meistens mit der Klassengröße.
+            Damit ist klar, um so kürzer desto besser.\\
+            Um etwas spezifischer zu werden, erweitern wir das Single Responsibility Principle (SRP) auf Dateien aus.
+            Während in Objekt orientierten Programmiersprachen eine Klasse pro Datei der Standard ist\footnote{In Programmiersprachen wie Java mag dies zwingend sein, in Objekt orientierten Programmiersprachen mit mehreren Paradigmen kann dies bei Kompositionen allerdings auch anders sinnvoll sein.}, steht bei der Funktionalen Programmierung die logische Einheit im vordergrund.
+            Diese logische Einheit sollte Atomar, also nicht weiter sinnvoll logisch unterteilbar sein.\\
+            Daraus lässt sich nun noch keine konkrete grenze für die Länge von Dateien ableiten.
+            Die Erfahrung hat allerdings gezeigt, dass 200 bis 500 Zeilen auch für größere, atomare, logische Einheiten ausreichend ist.
+            Alles darüber ist ein Indiz dafür, dass hier das SRP verletzt wurde.
+            Im Regelfall lässt sich aber auch weit darunter bleiben.
+            Mein persönlicher Richtwert bei einfachsten Klassen liegt bei 30 bis 50 Zeilen.
 
     \subsection{Horizontale Formatierung}
         Der erste offensichtliche Punkt hier ist das Einrücken (Intendation).
