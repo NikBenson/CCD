@@ -75,11 +75,12 @@
 	\include{title}
 
 	\pagenumbering{Roman}
-	\addcontentsline{toc}{section}{Inhaltsverzeichnis}
 	\tableofcontents
-	\newpage
-	\addcontentsline{toc}{section}{Liste der Abbildungen}
+	\vspace{1cm}
+	\addcontentsline{toc}{section}{\lstlistlistingname}
 	\lstlistoflistings
+	\vspace{1cm}
+	\addcontentsline{toc}{section}{\listfigurename}
 	\listoffigures
 	\newpage
 	\pagenumbering{arabic}
@@ -87,6 +88,7 @@
 	\include{introduction}
 	\include{groups}
 	\include{formatter}
+	\include{conclusion}
 
 	\pagenumbering{roman}
 	\addcontentsline{toc}{section}{Quellenverzeichnis}

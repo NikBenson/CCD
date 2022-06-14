@@ -1,16 +1,16 @@
-\section{Formatter und Linter}
-    Die meisten Programmiersprachen bringen auch Tools mit sich, die einem helfen, die jewailigen Style Guides ein zu halten.
-    Diese Tools lassen sich in 2 Kategorien unterteilen:
-    \paragraph{Linter}
+\section{Tools}
+    Die meisten Programmiersprachen bringen auch Tools mit sich, die einem helfen, die jeweiligen Style Guides ein zu halten.
+    Diese Tools lassen sich meist in 2 Kategorien einordnen, jedoch sollte auch abgesehen von diesen Kategorien jedes Tool genutzt werden, was die Formatierung vereinfacht:
+    \subsection{Linter}
         Linter sind historisch bedingt entstanden.
-        Zu zeiten von Lochkartencomputern dienten sie dazu, den Code vor dem eigentlichen Compileprozess, der damals meist mehrere Stunden bis Tage dauerte, zu überprüfen.
-        Heute werden sie dafür genutzt, optionale Regeln durch zu setzen.
+        Zu Zeiten von Lochkartencomputern dienten sie dazu, den Code vor dem eigentlichen Compileprozess, der damals meist mehrere Stunden bis Tage dauerte, zu überprüfen.
+        Heute werden sie dafür genutzt, optionale Regeln durchzusetzen.
         So lassen sich ESLint und ähnliche Tools problemlos in den meisten IDEs so wie CI/CD Pipelines integrieren.
-        Damit kann sichergestellt werden, dass der Code gewisse Standarts erfüllt.\\
+        Damit kann sichergestellt werden, dass der Code gewisse Standards erfüllt.\\
         Da die Tools konfigurierbar sind können so auch indirekt die Teaminternen Styleguides vermittelt und überprüft werden.
-        Sie setzen also die gewünschte Einheitlichkeit um und sollten nicht, wie es häufig getahen wird, ausgehebelt werden, nur weil es einem selbst nicht gefällt.
+        Sie setzen also die gewünschte Einheitlichkeit um und sollten nicht, wie es häufig getan wird, ausgehebelt werden, nur weil es einem selbst nicht gefällt.
 
-    \paragraph{Formatter}
+    \subsection{Formatter}
         Formatter hingegen helfen dabei, diese Regeln schnell umzusetzen.
         Ein Formatter ist ein Tool, welches eine Datei automatisch anhand bestimmter Regeln formatiert.
         Wenn auch meist nicht so detailliert wie die meisten Linter, so wird einem die meiste Arbeit, die der Linter einem auferlegt, wieder abgenommen.
