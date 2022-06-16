@@ -94,6 +94,16 @@
             Dennoch ist zu berücksichtigen, dass jedes Teammitglied die Zeile in einem lesen können sollte.\\
             Abgesehen davon, wie immer, so kurz wie möglich.
             Und natürlich maximal ein Statement pro Zeile.
-            Mehr pauschale Aussagen lassen sich zu diesem Thema leider schwer tätigen.
+            Mehr pauschale Aussagen lassen sich zu diesem Thema leider schwer tätigen.\\
+            Als Beispiel empfiehlt der Dart Styleguide eine maximale Zeilenlänge von 80 Zeichen.
+            Alles über diesem groben Maß ist ein Indiz für zu viel Information in einer Zeile.
 
+    \subsection{Formatierung im kleinen}
+        Nicht nur die Bindung zwischen großen Sektionen ist wichtig.
+        Auch im kleinen kann eine Leerzeile viel ausmachen.
+        Häufig sind es hier Angewohnheiten aus anderen Fachbereichen, die hier zu Problemen führen.
+        \lstinputlisting[language=Java, caption={Formatierung eines Mathematikers \autocite{benson-2022}}, label=fig:numbers]{numbers.c}
+        In \ref{fig:numbers} ist beispielhaft eine für Mathematiker typische Formatierung zu erkennen.
+        Alle \qq{Gruppen} einer Varriableninitialisierung stehen untereinander.
+        So sind zwar alle Zahlen auf einen Blick zu erkennen, allerdings untergräbt es die horizontale zusammengehörigkeit der einzelnen Statements.
 
