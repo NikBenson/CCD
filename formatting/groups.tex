@@ -101,9 +101,28 @@
     \subsection{Formatierung im kleinen}
         Nicht nur die Bindung zwischen großen Sektionen ist wichtig.
         Auch im kleinen kann eine Leerzeile viel ausmachen.
-        Häufig sind es hier Angewohnheiten aus anderen Fachbereichen, die hier zu Problemen führen.
+        Häufig sind es Angewohnheiten aus anderen Fachbereichen, die hier zu Problemen führen.
         \lstinputlisting[language=Java, caption={Formatierung eines Mathematikers \autocite{benson-2022}}, label=fig:numbers]{numbers.c}
         In \ref{fig:numbers} ist beispielhaft eine für Mathematiker typische Formatierung zu erkennen.
         Alle \qq{Gruppen} einer Varriableninitialisierung stehen untereinander.
-        So sind zwar alle Zahlen auf einen Blick zu erkennen, allerdings untergräbt es die horizontale zusammengehörigkeit der einzelnen Statements.
-
+        So sind zwar alle Zahlen auf einen Blick zu erkennen, allerdings untergräbt es die horizontale Zusammengehörigkeit der einzelnen Statements.
+        Deshalb ist es hier leicht die Werte in der horizontalen zu vertauschen.
+        Die Bindung innerhalb eines Statements sollte immer stärker sein, als die Bindung mehrerer Statements.\\
+        Aber gerade bei mathematischen Ausdrücken gibt es viel Spiel, um das Verständnis zu fördern.
+        Als Beispiel der Ausdruck $5*4+3*7=41$.
+        So sind wir selbst dazu verpflichtet, die Reihenfolge der Operationen anzuwenden.
+        Einfacher zu lesen ist $5*4\ +\ 3*7\ =\ 41$.
+        Hier ist auf den ersten Blick zu erkennen, was zuerst ausgeführt wird.
+        Dieses Konzept lässt sich auf sämtliche mathematische und boolesche Ausdrücke in nahezu allen Programmiersprachen anwenden.
+        Die Bindungsstärke von Operatoren variiert von Programmiersprache zu Programmiersprache.
+        Aber, wieder wie bei dem Author eines Zeitungsartikels, sollte diese Denkleistung beim schreiben des Codes aufgewendet werden und nicht beim lesen.
+        So sollte es einem Entwickler, der zum ersten Mal in einer neuen Programmiersprache coded, sofort möglich sein, logische Ausdrücke zu evaluieren.\\
+        Aber nicht nur bei logischen Ausdrücken kann ein Leerzeichen hilfreich sein.
+        Ein weiteres Beispiel sind Parameterlisten von Funktionen.
+        Auch hier helfen Leerzeichen, die Elemente zu trennen.
+        Auch wenn es hier wieder von den jeweiligen Styleguides abhängig ist.
+        Die einzelnen Parameter sollten  natürlich für zusätzliche Separation, sowohl beim Aufruf, als auch bei der Definition, zusätzlich mit einem Leerzeichen getrennt werden.
+        Aber auch zwischen dem Namen und der Parameterliste bei der Definition wird in einigen Styleguides ein Leerzeichen empfohlen.
+        Die wichtige Frage die es hier gild sich zu stellen ist, wie eng die Bindung zwischen dem Namen und den Parametern ist.
+        Mit verschiedenen Argumenten lassen sich hier beide Seiten vertreten.
+        Wichtig ist, wie so oft, lediglich die Einheitlichkeit.
