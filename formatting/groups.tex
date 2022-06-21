@@ -70,7 +70,7 @@
             Die Dateilänge hängt von vielen Faktoren ab.
             In Objektorientierten Programmiersprachen korreliert sie meistens mit der Klassengröße.
             Damit ist klar, um so kürzer desto besser.\\
-            Um etwas spezifischer zu werden, erweitern wir das Single Responsibility Principle (SRP) auf Dateien aus.
+            Um etwas spezifischer zu werden, weiten wir das Single Responsibility Principle (SRP) auf Dateien aus.
             Während in Objekt orientierten Programmiersprachen eine Klasse pro Datei der Standard ist\footnote{In Programmiersprachen wie Java mag dies zwingend sein, in Objekt orientierten Programmiersprachen mit mehreren Paradigmen kann dies bei Kompositionen allerdings auch anders sinnvoll sein.}, steht bei der Funktionalen Programmierung die logische Einheit im vordergrund.
             Diese logische Einheit sollte Atomar, also nicht weiter sinnvoll logisch unterteilbar sein.\\
             Daraus lässt sich nun noch keine konkrete grenze für die Länge von Dateien ableiten.
@@ -80,7 +80,7 @@
             Mein persönlicher Richtwert bei einfachsten Klassen liegt bei 30 bis 50 Zeilen.
 
     \subsection{Horizontale Formatierung}
-        Der erste offensichtliche Punkt hier ist das Einrücken (Intendation).
+        Der erste offensichtliche Punkt hier ist das Einrücken (Indentation).
         Durch das inkrementelle einrücken jedes Scopes lassen sich diese besonders gut erkennen.
         Dies lässt sich auch auf Parameter erweitern.
         \lstinputlisting[language=Java, caption={Einrücken bei benannten Parametern \autocite{benson-2022}}, label=fig:named-parameters]{named_parameters.dart}
